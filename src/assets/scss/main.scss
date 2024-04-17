@@ -1,0 +1,20 @@
+// UTILS
+@import './utils/fonts';
+@import './utils/colors';
+@import './utils/animations';
+
+// BASE
+@import './base/normalize';
+@import './base/general';
+@import './base/typography';
+
+// COMPONENTS
+@import './components/image-wrapper';
+@import './components/buttons';
+@import './components/icons';
+
+// LAYOUTS
+@import './layouts/nav';
+@import './layouts/header';
+@import './layouts/footer';
+@import './layouts/services';

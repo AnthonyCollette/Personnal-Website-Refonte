@@ -1,0 +1,40 @@
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $black;
+    color: $white;
+    font-family: $font-001;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+strong {
+    color: $color-001;
+}
+
+li {
+    list-style: none;
+    position: relative;
+
+
+    &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        background-color: $color-002;
+        margin-right: 10px;
+        margin-bottom: 2px;
+    }
+}

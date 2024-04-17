@@ -1,0 +1,28 @@
+.btn {
+    display: block;
+    width: fit-content;
+    padding: 20px 30px;
+    transition: all 0.3s ease-in-out;
+
+    &--primary {
+        background-color: $color-001;
+        color: $black;
+        border: 2px solid $color-001;
+
+        &:hover {
+            background-color: $white;
+            color: $color-001;
+        }
+        
+        &-outline {
+            border: 2px solid $color-001;
+            background-color: transparent;
+            color: $color-001;
+            
+            &:hover {
+                background-color: $color-001;
+                color: $black;
+            }
+        }
+    }
+}

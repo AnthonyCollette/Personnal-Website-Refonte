@@ -1,0 +1,47 @@
+header {
+
+    .overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $white;
+    }
+
+    h1 {
+        font-size: $font-xxxxl;
+        font-family: $font-002;
+
+        +p {
+            font-size: $font-xxxl;
+            font-family: $font-003;
+            margin-top: 10px;
+            line-height: 1;
+        }
+    }
+
+    p {
+        margin-top: 50px;
+        line-height: 1.5;
+        max-width: 60%;
+    }
+
+    a {
+        margin-top: 50px;
+    }
+
+    .computer {
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translateY(-30%);
+    }
+
+    .triangle {
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        // transform: translateY(-40%) rotate(90deg);
+        z-index: -1;
+        animation: rotate-ccw-header 50s linear infinite;
+    }
+}

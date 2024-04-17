@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../../fonts/Poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Auvant Gothic';
+    src: url('../../../fonts/OPTIAuvantGothic/OPTIAuvantGothic-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: url('../../../fonts/Lobster/LobsterTwo-Regular.ttf');
+}
+
+// FONT-FAMILIES
+$font-001 : 'Poppins';
+$font-002 : 'Auvant Gothic';
+$font-003 : 'Lobster';
+
+
+// FONT-SIZES
+$font-md: 1.8rem;
+$font-xxl: 2.8rem;
+$font-xxxl: 4.5rem;
+$font-xxxxl: 8rem;

@@ -1,0 +1,57 @@
+nav {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        >a {
+            font-size: $font-xxl;
+        }
+    }
+
+    a {
+        color: $white;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        li {
+            font-family: $font-002;
+            
+            &::before {
+                background-color: $white;
+                margin-bottom: 0;
+                transition: all 0.2s ease-in-out;
+            }
+
+            &:has(.active) {
+                &::before {
+                    background-color: $color-001;
+                }
+            }
+            
+            &:hover {
+                &::before {
+                    background-color: $color-001;
+                }
+            }
+        }
+
+        a {
+            text-transform: lowercase;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+}
