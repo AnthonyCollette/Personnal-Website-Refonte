@@ -1,6 +1,9 @@
 import Container from "./Container"
 import ImageWrapper from "./ImageWrapper"
-import computer from '../assets/images/computer.png';
+// import computer from '../assets/images/computer.png';
+import computer from '../assets/images/computer3.png';
+import screen from '../assets/images/screen.png';
+import displayingScreen from '../assets/images/screen2.png';
 import Triangle from "./Triangle";
 import Overlay from "./Overlay";
 import { Link } from "react-router-dom";
@@ -11,10 +14,12 @@ export default function Header() {
 
 
     return <header>
-        <ImageWrapper>
-            <img src={computer} alt="Homme sur une montagne" className="computer" />
+            <div className="computer-header">
+                <img src={computer} alt="Ordinateur portable" className="computer" />
+                <img src={screen} alt="Ecran d'ordinateur" className="screen" />
+                <img src={displayingScreen} alt="Affichage d'écran d'ordinateur" className="display-screen" /></div>
+
             <Triangle width={700} />
-            <Overlay>
                 <Container>
                     <h1>
                         anthony collette
@@ -27,7 +32,5 @@ export default function Header() {
                         Démarrez votre transformation digitale
                     </Link>
                 </Container>
-            </Overlay>
-        </ImageWrapper>
     </header>
 }
