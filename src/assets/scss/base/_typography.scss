@@ -1,5 +1,5 @@
 body {
-    font-size: 1.8rem;
+    font-size: $font-md;
 }
 
 p {
@@ -20,6 +20,11 @@ h3 {
     margin-bottom: 20px;
     font-size: $font-xxl;
     font-family: $font-002;
+}
+
+button {
+    font-family: $font-001;
+    font-size: $font-md;
 }
 
 .logo {

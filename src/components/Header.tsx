@@ -6,7 +6,7 @@ import screen from '../assets/images/screen.png';
 import displayingScreen from '../assets/images/screen2.png';
 import Triangle from "./Triangle";
 import Overlay from "./Overlay";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 
@@ -28,9 +28,9 @@ export default function Header() {
                         Concevoir l&apos;<strong>interface</strong>, créer l&apos;<strong>expérience</strong>.
                     </p>
                     <p>Votre entreprise mérite une présence en ligne à la hauteur de son ambition. Je suis là pour concrétiser cette vision. <br />Passionné de développement et de design graphique, je vous accompagne dans chaque étape de <strong>votre transformation digitale</strong>. <br />De la refonte graphique de votre site web à l&apos;optimisation de son expérience utilisateur, je mets mon expertise au service de votre succès.</p>
-                    <Link to="#services" className="btn btn--primary-outline">
+                    <button onClick={() => document.getElementById('services')?.scrollIntoView()} className="btn btn--primary-outline">
                         Démarrez votre transformation digitale
-                    </Link>
+                    </button>
                 </Container>
     </header>
 }
