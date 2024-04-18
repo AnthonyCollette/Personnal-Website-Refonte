@@ -1,4 +1,6 @@
 .portfolio {
+    position: relative;
+
     .filters {
         display: flex;
         gap: 20px;
@@ -17,16 +19,37 @@
 }
 
 .project {
-    width: 25%;
+    width: 21%;
     position: relative;
     backdrop-filter: blur(10px);
-    box-shadow: inset 0 0 5px $color-001;
     padding: 20px;
     transition: all 0.2s ease-in-out;
 
-    &:hover {
-        background-color: $color-001;
-        color: $black;
+    &.project--all-types {
+        box-shadow: inset 0 0 5px $color-003;
+
+        &:hover {
+            background-color: $color-003;
+            color: $black;
+        }
+    }
+
+    &.project--design {
+        box-shadow: inset 0 0 5px $color-002;
+
+        &:hover {
+            background-color: $color-002;
+            color: $black;
+        }
+    }
+
+    &.project--dev {
+        box-shadow: inset 0 0 5px $color-001;
+
+        &:hover {
+            background-color: $color-001;
+            color: $black;
+        }
     }
 
     h4 {
@@ -42,5 +65,69 @@
     p {
         font-size: $font-sm;
         text-align: right;
+    }
+}
+
+.lines {
+    position: absolute;
+    top: 300px;
+    z-index: -1;
+}
+
+.line {
+    width: 800px;
+    height: 5px;
+    background-color: $color-001;
+    position: relative;
+    animation: diagonale 10s linear infinite;
+    opacity: 0;
+    margin-bottom: 200px;
+
+    &:nth-child(1) {
+        width: 250px;
+        animation-delay: 5s;
+        animation-duration: 20s;
+    }
+
+    &:nth-child(2) {
+        width: 400px;
+        animation-delay: 2s;
+        animation-duration: 30s;
+    }
+
+    &:nth-child(3) {
+        width: 350px;
+        animation-delay: 2s;
+        animation-duration: 25s;
+    }
+
+    &:nth-child(4) {
+        width: 700px;
+        animation-delay: 7s;
+        animation-duration: 15s;
+    }
+
+    &:nth-child(5) {
+        width: 300px;
+        animation-delay: 4s;
+        animation-duration: 40s;
+    }
+
+    &:nth-child(6) {
+        width: 450px;
+        animation-delay: 6s;
+        animation-duration: 20s;
+    }
+
+    &:nth-child(7) {
+        width: 150px;
+        animation-delay: 8s;
+        animation-duration: 15s;
+    }
+
+    &:nth-child(8) {
+        width: 400px;
+        animation-delay: 4s;
+        animation-duration: 40s;
     }
 }

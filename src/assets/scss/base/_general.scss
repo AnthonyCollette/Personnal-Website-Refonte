@@ -7,6 +7,7 @@ body {
     background-color: $black;
     color: $white;
     font-family: $font-001;
+    overflow-x: hidden;
 }
 
 a {
@@ -50,4 +51,63 @@ section {
 .full-link {
     position: absolute;
     inset: 0;
+    opacity: 0;
+}
+
+.line {
+    width: 800px;
+    height: 5px;
+    background-color: $color-001;
+    position: relative;
+    animation: diagonale 10s linear infinite;
+    opacity: 0;
+    margin-bottom: 100px;
+
+    &:nth-child(1) {
+        width: 250px;
+        animation-delay: 5s;
+        animation-duration: 20s;
+    }
+
+    &:nth-child(2) {
+        width: 400px;
+        animation-delay: 2s;
+        animation-duration: 30s;
+    }
+
+    &:nth-child(3) {
+        width: 350px;
+        animation-delay: 2s;
+        animation-duration: 25s;
+    }
+
+    &:nth-child(4) {
+        width: 700px;
+        animation-delay: 7s;
+        animation-duration: 15s;
+    }
+
+    &:nth-child(5) {
+        width: 300px;
+        animation-delay: 4s;
+        animation-duration: 40s;
+    }
+
+    &:nth-child(6) {
+        width: 450px;
+        animation-delay: 6s;
+        animation-duration: 20s;
+    }
+
+    &:nth-child(7) {
+        width: 150px;
+        animation-delay: 8s;
+        animation-duration: 15s;
+    }
+
+    &:nth-child(8) {
+        width: 400px;
+        animation-delay: 4s;
+        animation-duration: 40s;
+    }
 }

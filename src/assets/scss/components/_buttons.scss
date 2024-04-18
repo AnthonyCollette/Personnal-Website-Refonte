@@ -35,8 +35,33 @@ button {
 .filter {
     padding: 10px 20px;
 
-    &.active {
-        background-color: $color-001;
-        color: $black;
+    &.project--all-types {
+        border-color: $color-003;
+        color: $color-003;
+
+        &:hover, &.active {
+            background-color: $color-003;
+            color: $black;
+        }
+    }
+
+    &.project--design {
+        border-color: $color-002;
+        color: $color-002;
+
+        &:hover, &.active {
+            background-color: $color-002;
+            color: $black;
+        }
+    }
+
+    &.project--dev {
+        border-color: $color-001;
+        color: $color-001;
+
+        &:hover, &.active {
+            background-color: $color-001;
+            color: $black;
+        }
     }
 }

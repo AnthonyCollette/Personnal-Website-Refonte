@@ -8,6 +8,42 @@ const Portfolio = () => {
         title: 'Effet Animal',
         desc: 'Site vitrine pour une société de zoothérapie',
         url: 'https://effetanimal.fr',
+        tags: ['design']
+    },
+    {
+        title: 'Effet Animal',
+        desc: 'Site vitrine pour une société de zoothérapie',
+        url: 'https://effetanimal.fr',
+        tags: ['design']
+    },
+    {
+        title: 'Effet Animal',
+        desc: 'Site vitrine pour une société de zoothérapie',
+        url: 'https://effetanimal.fr',
+        tags: ['design']
+    },
+    {
+        title: 'Effet Animal',
+        desc: 'Site vitrine pour une société de zoothérapie',
+        url: 'https://effetanimal.fr',
+        tags: ['design']
+    },
+    {
+        title: 'Ideal Zen',
+        desc: 'Site vitrine pour une société de Reiki',
+        url: 'https://idealzen.fr',
+        tags: ['dev']
+    },
+    {
+        title: 'Effet Animal',
+        desc: 'Site vitrine pour une société de zoothérapie',
+        url: 'https://effetanimal.fr',
+        tags: ['design']
+    },
+    {
+        title: 'Ideal Zen',
+        desc: 'Site vitrine pour une société de Reiki',
+        url: 'https://idealzen.fr',
         tags: ['dev', 'design']
     },
     {
@@ -29,7 +65,7 @@ const Portfolio = () => {
             case 'all':
                 return setFilteredProjects(projects)
             default:
-                return setFilteredProjects(projects.filter(project => {return project.tags.includes(type)}))
+                return setFilteredProjects(projects.filter(project => { return project.tags.includes(type) }))
         }
     }
 
@@ -59,17 +95,27 @@ const Portfolio = () => {
 
     return (
         <section className="portfolio">
+            <div className="lines">
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+            </div>
             <Container>
                 <h2>projets</h2>
                 <p>Une partie des projets que j'ai mené à bien</p>
                 <div className="filters">
-                    <button className={allSelected ? "btn btn--primary-outline filter active" : "btn btn--primary-outline filter"} onClick={() => filter('all')}>Tout</button>
-                    <button className={designSelected ? "btn btn--primary-outline filter active" : "btn btn--primary-outline filter"} onClick={() => filter('design')}>Design</button>
-                    <button className={devSelected ? "btn btn--primary-outline filter active" : "btn btn--primary-outline filter"} onClick={() => filter('dev')}>Développement</button>
+                    <button className={allSelected ? "btn btn--primary-outline filter project--all-types active" : "btn btn--primary-outline filter project--all-types"} onClick={() => filter('all')}>Tout</button>
+                    <button className={designSelected ? "btn btn--primary-outline filter project--design active" : "btn btn--primary-outline filter project--design"} onClick={() => filter('design')}>Design</button>
+                    <button className={devSelected ? "btn btn--primary-outline filter project--dev active" : "btn btn--primary-outline filter project--dev"} onClick={() => filter('dev')}>Développement</button>
                 </div>
                 <div className="results">
                     {filteredProjects.map((project, index) => {
-                        return <Project key={index} title={project.title} desc={project.desc} url={project.url} />
+                        return <Project key={index} title={project.title} desc={project.desc} url={project.url} types={project.tags} />
                     })}
 
                 </div>

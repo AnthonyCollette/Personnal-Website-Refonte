@@ -39,3 +39,17 @@
         transform: translateY(-20px);
     }
 }
+
+@keyframes diagonale {
+    0% {
+        opacity: 1;
+        transform: rotate(-30deg) translateX(-100vw) translateY(-100%);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(-30deg) translateX(200vw) translateY(100%);
+    }
+}

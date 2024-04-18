@@ -4,10 +4,11 @@ import IdealZen from '../assets/images/sites/idealzen.png';
 type Props = {
     title?: string,
     desc?: string,
-    url?: string
+    url?: string,
+    types?: Array<string>
 }
 
-const Project = ({ title, desc, url }: Props) => {
+const Project = ({ title, desc, url, types }: Props) => {
 
     const getImg = () => {
         switch (title) {
@@ -18,9 +19,21 @@ const Project = ({ title, desc, url }: Props) => {
         }
     }
 
+    const getClassName = () => {
+        if (!types) {
+            return "project"
+        } else if (types?.length > 1) {
+            return "project project--all-types"
+        } else if (types?.includes('design')) {
+            return "project project--design"
+        } else if (types?.includes('dev')) {
+            return "project project--dev"
+        }
+    }
+
     return (
-        <div className="project">
-            <a href={url} target="_blank" className="full-link" />
+        <div className={getClassName()}>
+            <a href={url} target="_blank" rel='noreferrer' className="full-link">Accéder au site</a>
             <img src={getImg()} alt={"Projet pour " + title} />
             <h4>{title}</h4>
             <p>{desc}</p>
