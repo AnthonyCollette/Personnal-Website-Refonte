@@ -1,3 +1,7 @@
+button {
+    cursor: pointer;
+}
+
 .btn {
     display: block;
     width: fit-content;
@@ -14,16 +18,25 @@
             background-color: $white;
             color: $color-001;
         }
-        
+
         &-outline {
             border: 2px solid $color-001;
             background-color: transparent;
             color: $color-001;
-            
+
             &:hover {
                 background-color: $color-001;
                 color: $black;
             }
         }
+    }
+}
+
+.filter {
+    padding: 10px 20px;
+
+    &.active {
+        background-color: $color-001;
+        color: $black;
     }
 }

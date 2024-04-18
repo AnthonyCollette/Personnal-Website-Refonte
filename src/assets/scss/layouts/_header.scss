@@ -1,6 +1,6 @@
 header {
 
-    min-height: 100vh;
+    min-height: calc(100vh - 68px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,5 +56,9 @@ header {
         top: 50%;
         z-index: -1;
         animation: rotate-ccw-header 50s linear infinite;
+    }
+
+    + section {
+        padding-top: 0;
     }
 }
