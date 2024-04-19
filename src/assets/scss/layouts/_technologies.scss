@@ -1,8 +1,38 @@
 .technologies {
-    // background-color: rgba($color: $white, $alpha: 0.6);
-    backdrop-filter: blur(10px);
-    padding: 50px 0;
-    // box-shadow: inset 0 0 15px $color-002;
+    // backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    margin: 100px 0;
+
+    &::before {
+        content: '';
+        background-color: $color-002;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -50px;
+        left: 15%;
+        border-radius: 50%;
+        z-index: -10;
+        animation: goToRight 10s linear infinite;
+    }
+
+    &::after {
+        content: '';
+        background-color: $color-003;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: -80px;
+        right: 20%;
+        border-radius: 50%;
+        z-index: -10;
+        animation: goToLeft 10s linear infinite;
+    }
+
+    .container {
+        padding: 50px 0;
+    }
 
     .slick-slider {
         button {
@@ -69,4 +99,8 @@
             transition: all 0.2s ease-in-out;
         }
     }
+}
+
+.blur {
+    backdrop-filter: blur(150px);
 }

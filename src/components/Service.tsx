@@ -1,29 +1,21 @@
-import designIcon from '../assets/images/design-icon.svg';
-import devIcon from '../assets/images/dev-icon.svg';
+
 
 type Props = {
-    icon: String,
-    title: String,
-    list: {
-        text: String
-    }[]
+    icon: string,
+    title: string,
+    list?: {
+        text: string
+    }[],
+    desc?: string
 }
 
-const Service = ({ icon, title, list }: Props) => {
-
-    const displayIcon = () => {
-        switch (icon) {
-            case 'design':
-                return <img src={designIcon} alt="Icone de design graphique" />
-            case 'dev':
-                return <img src={devIcon} alt="Icone de développement web" />
-        }
-    }
+const Service = ({ icon, title, list, desc }: Props) => {
 
     return (
         <div className="service">
-            {displayIcon()}
+            {icon && <img src={icon} alt="icone" />}
             {title && <h3>{title}</h3>}
+            {desc && <p>{desc}</p>}
             {list && list.map((item, index) => { return <li key={index}>{item.text}</li> })}
         </div>
     );

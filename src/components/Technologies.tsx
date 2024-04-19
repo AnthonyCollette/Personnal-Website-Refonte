@@ -51,9 +51,11 @@ const Technologies = () => {
 
     return (
         <div className="technologies">
-            <Container>
-                <CustomSlider images={images} />
-            </Container>
+            <div className='blur'>
+                <Container>
+                    <CustomSlider images={images} />
+                </Container>
+            </div>
         </div>
     );
 };

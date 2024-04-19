@@ -53,3 +53,14 @@
         transform: rotate(-30deg) translateX(200vw) translateY(100%);
     }
 }
+
+@keyframes goToRight {
+    50% {
+        left: 35%;
+    }    
+}
+@keyframes goToLeft {
+    50% {
+        right: 40%;
+    }    
+}

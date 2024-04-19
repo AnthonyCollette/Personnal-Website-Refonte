@@ -15,7 +15,7 @@
     .triangle {
         position: absolute;
         left: 10%;
-        top: -10%;
+        top: 10%;
         transform: rotate(135deg);
         z-index: -1;
         animation: rotate-cw 50s linear infinite;
@@ -47,5 +47,9 @@
     li {
         margin-bottom: 10px;
         line-height: 1.3;
+    }
+
+    p {
+        text-align: center;
     }
 }
