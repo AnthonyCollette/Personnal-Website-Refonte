@@ -65,3 +65,11 @@ button {
         }
     }
 }
+
+.redirect a {
+    margin: 20px auto;
+
+    &:hover {
+        background-color: transparent;
+    }
+}

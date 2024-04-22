@@ -1,0 +1,11 @@
+.contact {
+    position: relative;
+
+    .triangle {
+        position: absolute;
+        right: 400px;
+        top: -100px;
+        animation: rotate-ccw 20s linear infinite;
+        z-index: -1;
+    }
+}

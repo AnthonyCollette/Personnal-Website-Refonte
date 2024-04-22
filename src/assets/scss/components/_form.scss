@@ -1,0 +1,43 @@
+form {
+    max-width: 500px;
+    width: 90%;
+    margin: 50px auto;
+    padding: 50px;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        input,
+        textarea {
+            margin: 10px 0 20px;
+            padding: 10px;
+            text-align: center;
+            font-family: $font-001;
+            font-size: $font-md;
+            background-color: transparent;
+            border: none;
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 0 15px rgba($color: $color-001, $alpha: 1.0);
+            width: 100%;
+            color: $white;
+            transition: all 0.2s ease-in-out;
+
+            &:active, &:focus-visible, &:focus-within {
+                box-shadow: inset 0 0 15px rgba($color: $color-002, $alpha: 1.0);
+                outline: none;
+            }
+        }
+
+        textarea {
+            height: 300px;
+            resize: none;
+        }
+    }
+
+    .btn.btn--primary-outline {
+        margin: 0 auto;
+        padding: 10px 20px !important;
+    }
+}

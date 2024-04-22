@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 
-const Contact = () => {
+const ContactPage = () => {
     return (
         <>
             <Nav />
@@ -13,4 +13,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default ContactPage;
