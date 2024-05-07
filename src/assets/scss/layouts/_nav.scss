@@ -12,8 +12,12 @@ nav {
         align-items: center;
         justify-content: space-between;
 
-        >a {
-            font-size: $font-xxl;
+        .logo {
+            font-size: $font-xl;
+
+            @include min($lg) {
+                font-size: $font-xxl;
+            }
         }
     }
 
@@ -21,14 +25,60 @@ nav {
         color: $white;
     }
 
-    ul {
+    .mobile-menu-button {
+        width: 30px;
+        height: 30px;
+        border: 2px solid $white;
         display: flex;
+        flex-wrap: wrap;
+        gap: 3px;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+        background-color: transparent;
+        @include min($lg) {
+            display: none;
+        }
+
+        .square {
+            background-color: $white;
+            width: 40%;
+            aspect-ratio: 1;
+        }
+    }
+
+    .menu {
+        display: none;
         align-items: center;
         gap: 50px;
 
+        @include min($lg) {
+            display: flex;
+        }
+
+        &--mobile {
+            position: fixed;
+            background-color: $black;
+            inset: 0;
+            height: 100vh;
+            width: 100vw;
+            padding: 50px;
+
+            li {
+                text-transform: uppercase;
+                font-weight: 600;
+                &:not(:first-of-type) {
+                    margin-top: 30px;
+                }
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
         li {
             font-family: $font-002;
-            
+
             &::before {
                 background-color: $white;
                 margin-bottom: 0;
@@ -40,7 +90,7 @@ nav {
                     background-color: $color-001;
                 }
             }
-            
+
             &:hover {
                 &::before {
                     background-color: $color-001;

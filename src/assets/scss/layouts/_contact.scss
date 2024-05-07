@@ -2,10 +2,15 @@
     position: relative;
 
     .triangle {
-        position: absolute;
-        right: 400px;
-        top: -100px;
-        animation: rotate-ccw 20s linear infinite;
-        z-index: -1;
+        display: none;
+        @include min($lg) {
+            position: absolute;
+            right: 20%;
+            top: -10%;
+            animation: rotate-ccw 20s linear infinite;
+            z-index: -1;
+            width: 20%;
+            display: block;
+        }
     }
 }

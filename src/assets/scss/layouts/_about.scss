@@ -2,14 +2,31 @@
     .columns {
         display: flex;
         align-items: center;
-        > div {
-            width: 50%;
+        flex-direction: column-reverse;
+
+        @include min($lg) {
+            flex-direction: row;
         }
 
-        .column__left {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        >div {
+            @include min($lg) {
+                width: 50%;
+            }
+        }
+
+        .column {
+            &__left {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &__right {
+                margin-bottom: 50px;
+
+                @include min($lg) {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         img {

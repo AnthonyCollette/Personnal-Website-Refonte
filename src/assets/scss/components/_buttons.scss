@@ -5,9 +5,13 @@ button {
 .btn {
     display: block;
     width: fit-content;
-    padding: 20px 30px;
+    padding: 10px 30px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+
+    @include min($lg) {
+        padding: 20px 30px;
+    }
 
     &--primary {
         background-color: $color-001;
@@ -33,7 +37,11 @@ button {
 }
 
 .filter {
-    padding: 10px 20px;
+    padding: 5px 10px;
+
+    @include min($lg) {
+        padding: 10px 20px;
+    }
 
     &.project--all-types {
         border-color: $color-003;
@@ -71,5 +79,30 @@ button {
 
     &:hover {
         background-color: transparent;
+    }
+}
+
+.close-btn {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    right: 40px;
+    top: 40px;
+    &::before, &::after {
+        content: '';
+        width: 20px;
+        height: 3px;
+        background-color: $white;
+        position: absolute;
+    }
+    &::before {
+        top: 0;
+        right: 0;
+        transform: rotate(-45deg);
+    }
+    &::after {
+        top: 0;
+        right: 0;
+        transform: rotate(45deg);
     }
 }

@@ -3,39 +3,59 @@
 
     &-wrapper {
         display: flex;
-        gap: 100px;
+        flex-direction: column;
+
+        @include min($lg) {
+            flex-direction: row;
+            gap: 100px;
+        }
     }
 
     .container {
         >p {
-            text-align: center;
+            text-align: justify;
+
+            @include min($lg) {
+                text-align: center;
+            }
         }
     }
 
     .triangle {
-        position: absolute;
-        left: 10%;
-        top: 10%;
-        transform: rotate(135deg);
-        z-index: -1;
-        animation: rotate-cw 50s linear infinite;
+        display: none;
+        @include min($lg) {
+            width: 20%;
+            position: absolute;
+            transform: rotate(135deg);
+            z-index: -1;
+            animation: rotate-cw 50s linear infinite;
+            top: 5%;
+            left: 5%;
+            display: block;
+        }
     }
 }
 
 .service {
     backdrop-filter: blur(10px);
-    width: 50%;
     margin-top: 150px;
     position: relative;
     padding: 350px 50px 50px;
     box-shadow: inset 0 0 15px $color-002;
 
+    @include min($lg) {
+        width: 50%;
+    }
+
     &:nth-of-type(2) {
-        > img {
+        padding-top: 250px;
+
+        >img {
             animation-delay: 2s;
         }
     }
-    > img {
+
+    >img {
         position: absolute;
         left: 50%;
         top: -80px;

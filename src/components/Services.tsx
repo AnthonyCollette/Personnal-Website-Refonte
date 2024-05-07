@@ -12,7 +12,7 @@ const Services = () => {
 
     return (
         <section className='services' id="services">
-            <Triangle width={600} />
+            <Triangle />
             <Container>
                 <h2>Services</h2>
                 <p>En tant que graphiste et développeur freelance, je propose une gamme de services pour répondre à vos besoins créatifs et techniques. Que vous recherchiez un design graphique percutant ou une solution de développement web sur mesure, je suis là pour vous aider à concrétiser vos idées. Voici quelques-uns des services que je propose :</p>

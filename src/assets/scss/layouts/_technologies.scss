@@ -1,5 +1,4 @@
 .technologies {
-    // backdrop-filter: blur(10px);
     position: relative;
     overflow: hidden;
     margin: 100px 0;
@@ -51,7 +50,10 @@
         }
 
         .slick-prev {
-            left: -35px;
+            left: -15px;
+            @include min($lg) {
+                left: -35px; 
+            }
 
             &::before {
                 transform: translateY(-2px) rotate(-45deg);

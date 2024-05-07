@@ -11,11 +11,11 @@ export default function Header() {
 
     return <header>
             <div className="computer-header">
-                <img src={computer} alt="Ordinateur portable" className="computer" />
-                <img src={screen} alt="Ecran d'ordinateur" className="screen" />
-                <img src={displayingScreen} alt="Affichage d'écran d'ordinateur" className="display-screen" /></div>
+                <img src={computer} alt="Ordinateur portable" className="computer-header__computer" />
+                <img src={screen} alt="Ecran d'ordinateur" className="computer-header__green-screen" />
+                <img src={displayingScreen} alt="Affichage d'écran d'ordinateur" className="computer-header__screen" /></div>
 
-            <Triangle width={700} />
+            <Triangle />
                 <Container>
                     <h1>
                         anthony collette

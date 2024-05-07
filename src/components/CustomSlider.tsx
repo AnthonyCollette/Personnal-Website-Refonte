@@ -19,6 +19,14 @@ const CustomSlider = ({ images }: Props) => {
         autoplay: true,
         autoplaySpeed: 3000,
         centerMode: true,
+        responsive: [
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 3,
+                }
+            }
+        ]
     }
 
     return (
