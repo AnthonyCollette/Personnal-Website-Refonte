@@ -1,0 +1,27 @@
+.mentions {
+    h1 {
+        font-size: $font-xxxl;
+        font-family: $font-002;
+        text-transform: lowercase;
+        text-align: center;
+        margin: 50px auto;
+        @include min($lg) {
+            font-size: $font-xxxxl;
+        }
+    }
+    h2 {
+        margin-top: 50px;
+        font-size: $font-xl;
+        @include min($lg) {
+            font-size: $font-xxxl;
+        }
+    }
+    h3 {
+        margin-top: 50px;
+        text-align: left;
+        font-size: $font-lg;
+        @include min($lg) {
+            font-size: $font-xxl;
+        }
+    }
+}

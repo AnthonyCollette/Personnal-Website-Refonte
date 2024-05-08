@@ -5,52 +5,86 @@ import Project from "./Project";
 const Portfolio = () => {
 
     const projects = [{
-        title: 'Effet Animal',
-        desc: 'Site vitrine pour une société de zoothérapie',
-        url: 'https://effetanimal.fr',
+        title: 'Avocajust',
+        desc: "Logo pour une société d'avocats",
+        url: 'https://avocajust.com/',
         tags: ['design']
-    },
-    {
+    }, {
         title: 'Effet Animal',
         desc: 'Site vitrine pour une société de zoothérapie',
         url: 'https://effetanimal.fr',
+        tags: ['design', 'dev']
+    }, {
+        title: "Hozu",
+        desc: "Logo pour un restaurant asiatique",
+        url: 'https://www.hozusushi.com/',
         tags: ['design']
-    },
-    {
-        title: 'Effet Animal',
-        desc: 'Site vitrine pour une société de zoothérapie',
-        url: 'https://effetanimal.fr',
+    }, {
+        title: "Monthlery conduite",
+        desc: "Dépliant commercial pour une auto-école",
+        url: "https://www.instagram.com/p/CA2z6yygktA/?img_index=1",
         tags: ['design']
-    },
-    {
-        title: 'Effet Animal',
-        desc: 'Site vitrine pour une société de zoothérapie',
-        url: 'https://effetanimal.fr',
+    }, {
+        title: 'Victoria Thibault',
+        desc: 'Logo pour un mariage',
+        url: 'https://www.instagram.com/p/B1MIsLbhz_3/',
         tags: ['design']
-    },
-    {
-        title: 'Ideal Zen',
-        desc: 'Site vitrine pour une société de Reiki',
-        url: 'https://idealzen.fr',
-        tags: ['dev']
-    },
-    {
-        title: 'Effet Animal',
-        desc: 'Site vitrine pour une société de zoothérapie',
-        url: 'https://effetanimal.fr',
+    }, {
+        title: 'Starsheep',
+        desc: 'Logo pour une association venant en aide aux enfants malades',
+        url: 'https://www.instagram.com/p/B_ANDJig4Yh/',
         tags: ['design']
     },
     {
         title: 'Ideal Zen',
         desc: 'Site vitrine pour une société de Reiki',
         url: 'https://idealzen.fr',
-        tags: ['dev', 'design']
-    },
-    {
-        title: 'Ideal Zen',
-        desc: 'Site vitrine pour une société de Reiki',
-        url: 'https://idealzen.fr',
-        tags: ['dev', 'design']
+        tags: ['design', 'dev']
+    }, {
+        title: "Opal'lien",
+        desc: 'Logo pour une entreprise de zoothérapie',
+        url: 'https://www.instagram.com/p/B-KLi8zgloE/?img_index=1',
+        tags: ['design']
+    }, {
+        title: 'Bibi300 Logo',
+        desc: 'Logo pour le vidéaste Bibi300',
+        url: 'https://www.youtube.com/@Bibi300',
+        tags: ['design']
+    }, {
+        title: 'Isabelle Usclade',
+        desc: 'Site vitrine pour une société de sophrologie',
+        url: 'http://isabelleusclade.fr/',
+        tags: ['design', 'dev']
+    }, {
+        title: 'Adaf',
+        desc: "Logo pour l'association animale ADAF",
+        url: "https://www.instagram.com/p/B0Qbt5ihUYE/",
+        tags: ['design']
+    }, {
+        title: 'Bibi300 Bannière',
+        desc: 'Bannière pour la chaîne Youtube du vidéaste Bibi300',
+        url: 'https://www.youtube.com/@Bibi300',
+        tags: ['design']
+    }, {
+        title: 'Isolabel',
+        desc: "Logo pour société d'isolation",
+        url: 'https://www.instagram.com/p/Bt9ME9jHaWv/',
+        tags: ['design']
+    }, {
+        title: 'Geneapro',
+        desc: "Flyer de présentation d'activité de généalogiste",
+        url: 'https://www.instagram.com/p/CBOX_-FAm5O/',
+        tags: ['design']
+    }, {
+        title: 'ADAF',
+        desc: "Logo pour l'association animale ADAF",
+        url: 'https://www.instagram.com/p/B0T9Pr5BFzw/',
+        tags: ['design']
+    }, {
+        title: 'Lionheart',
+        desc: "Logo pour une marque de frites",
+        url: 'https://www.instagram.com/p/Bt9L_3XnVAm/',
+        tags: ['design']
     }]
 
     const [filteredProjects, setFilteredProjects] = useState<Array<{
