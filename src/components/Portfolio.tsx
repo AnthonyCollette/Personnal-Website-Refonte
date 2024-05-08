@@ -39,7 +39,7 @@ const Portfolio = () => {
         title: 'Ideal Zen',
         desc: 'Site vitrine pour une société de Reiki',
         url: 'https://idealzen.fr',
-        tags: ['design', 'dev']
+        tags: ['dev']
     }, {
         title: "Opal'lien",
         desc: 'Logo pour une entreprise de zoothérapie',
@@ -54,7 +54,7 @@ const Portfolio = () => {
         title: 'Isabelle Usclade',
         desc: 'Site vitrine pour une société de sophrologie',
         url: 'http://isabelleusclade.fr/',
-        tags: ['design', 'dev']
+        tags: ['dev']
     }, {
         title: 'Adaf',
         desc: "Logo pour l'association animale ADAF",
@@ -92,7 +92,7 @@ const Portfolio = () => {
         desc: string,
         url: string,
         tags: Array<string>
-    }>>([])
+    }>>(projects)
 
     const filteringProjects = (type: string) => {
         switch (type) {
@@ -103,7 +103,7 @@ const Portfolio = () => {
         }
     }
 
-    const [allSelected, setAllSelected] = useState(false)
+    const [allSelected, setAllSelected] = useState(true)
     const [designSelected, setDesignSelected] = useState(false)
     const [devSelected, setDevSelected] = useState(false)
 
