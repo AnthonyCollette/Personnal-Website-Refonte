@@ -1,0 +1,19 @@
+.error-404 {
+    text-align: center;
+
+    h1 {
+        font-size: $font-xxxxl;
+        font-family: $font-002;
+        text-transform: lowercase;
+        margin-bottom: 30px;
+    }
+
+    main {
+        padding: 35vh 0;
+
+        a {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+}
