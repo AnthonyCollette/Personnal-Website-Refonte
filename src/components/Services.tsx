@@ -18,8 +18,8 @@ const Services = () => {
                 <p>En tant que graphiste et développeur freelance, je propose une gamme de services pour répondre à vos besoins créatifs et techniques. Que vous recherchiez un design graphique percutant ou une solution de développement web sur mesure, je suis là pour vous aider à concrétiser vos idées. Voici quelques-uns des services que je propose :</p>
 
                 <div className='services-wrapper'>
-                    {services.map((service) => {
-                        return <Service icon={service.icon} title={service.title} list={service.list} />
+                    {services.map((service, index) => {
+                        return <Service key={index} icon={service.icon} title={service.title} list={service.list} />
                     })}
                 </div>
             </Container>

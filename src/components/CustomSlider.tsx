@@ -32,7 +32,7 @@ const CustomSlider = ({ images }: Props) => {
     return (
         <Slider {...settings}>
             {images && images.map((image) => {
-                return <div><img src={image.src} alt={image.alt} /></div>
+                return <div key={image.alt}><img src={image.src} alt={image.alt} /></div>
             })}
         </Slider>
     );

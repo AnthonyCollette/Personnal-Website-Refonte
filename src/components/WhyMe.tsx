@@ -26,8 +26,8 @@ const WhyMe = () => {
                 <h2>Pourquoi moi ?</h2>
                 <p>En tant que freelance, je combine les compétences de développeur web et de graphiste pour vous offrir une approche intégrée répondant à l'ensemble de vos besoins en ligne. Voici pourquoi vous pourriez trouver avantageux de faire appel à un professionnel polyvalent comme moi :</p>
                 <div className="services">
-                    {services?.map(service => {
-                        return <Service icon={service.icon} title={service.title} desc={service.desc} />
+                    {services?.map((service, index) => {
+                        return <Service key={index} icon={service.icon} title={service.title} desc={service.desc} />
                     })}
                 </div>
                 <p>En somme, faire appel à un freelance offrant à la fois des compétences en développement web et en conception graphique vous permet de bénéficier d'une approche holistique, d'une communication efficace et d'une flexibilité accrue pour concrétiser votre vision en ligne de manière professionnelle et cohérente.</p>

@@ -13,6 +13,21 @@ form {
         flex-direction: column;
         width: 100%;
 
+        &.error {
+
+            input,
+            textarea {
+                box-shadow: inset 0 0 15px rgba($color: $error, $alpha: 1.0);
+                margin-bottom: 5px;
+            }
+
+            p {
+                color: $error;
+                margin-bottom: 10px;
+                font-size: $font-sm;
+            }
+        }
+
         input,
         textarea {
             margin: 10px 0 20px;
@@ -28,7 +43,9 @@ form {
             color: $white;
             transition: all 0.2s ease-in-out;
 
-            &:active, &:focus-visible, &:focus-within {
+            &:active,
+            &:focus-visible,
+            &:focus-within {
                 box-shadow: inset 0 0 15px rgba($color: $color-002, $alpha: 1.0);
                 outline: none;
             }
@@ -43,5 +60,12 @@ form {
     .btn.btn--primary-outline {
         margin: 0 auto;
         padding: 10px 20px !important;
+    }
+}
+
+.success,
+.fail {
+    h3 {
+        margin: 100px auto;
     }
 }
