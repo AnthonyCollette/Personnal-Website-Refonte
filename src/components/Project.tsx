@@ -50,7 +50,7 @@ const Project = ({ title, desc, url, types }: Props) => {
                 return Lionheart
             case 'Hozu':
                 return Hozu
-            case 'Monthlery conduite':
+            case 'Montlhery conduite':
                 return Monthlery
             case 'Geneapro':
                 return Geneapro

@@ -20,7 +20,7 @@ const Portfolio = () => {
         url: 'https://www.hozusushi.com/',
         tags: ['design']
     }, {
-        title: "Monthlery conduite",
+        title: "Montlhery conduite",
         desc: "Dépliant commercial pour une auto-école",
         url: "https://www.instagram.com/p/CA2z6yygktA/?img_index=1",
         tags: ['design']

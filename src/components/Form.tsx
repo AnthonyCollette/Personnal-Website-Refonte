@@ -6,6 +6,7 @@ const Form = () => {
     const nameRef = useRef<HTMLInputElement>(null)
     const emailRef = useRef<HTMLInputElement>(null)
     const messageRef = useRef<HTMLTextAreaElement>(null)
+    const consentRef = useRef<HTMLInputElement>(null)
     const serviceId: string = (process.env.REACT_APP_SERVICE_ID as string)
     const templateId: string = (process.env.REACT_APP_TEMPLATE_ID as string)
     const publicKey: string = (process.env.REACT_APP_PUBLIC_KEY as string)
@@ -14,6 +15,7 @@ const Form = () => {
     const [nameError, setNameError] = useState(false)
     const [emailError, setEmailError] = useState(false)
     const [messageError, setMessageError] = useState(false)
+    const [consentError, setConsentError] = useState(false)
     const validateEmail = (email: String) => {
         return email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
     }
@@ -23,6 +25,7 @@ const Form = () => {
         setNameError(false)
         setEmailError(false)
         setMessageError(false)
+        setConsentError(false)
 
         if (form.current !== null) {
 
@@ -40,6 +43,11 @@ const Form = () => {
 
             if ((typeof messageRef?.current?.value === 'string' && messageRef?.current?.value?.length < 3) || typeof messageRef?.current?.value !== 'string') {
                 setMessageError(true)
+                formIsValid = false
+            }
+
+            if ((!consentRef?.current?.checked)) {
+                setConsentError(true)
                 formIsValid = false
             }
             if (formIsValid) {
@@ -79,6 +87,11 @@ const Form = () => {
                 </label>
                 <textarea name='message' ref={messageRef} placeholder="Une question ? Un projet ?" />
                 {messageError && <p>Merci de remplir votre message</p>}
+            </div>
+            <div className={consentError ? 'form-group error' : 'form-group'}>
+                <input type="checkbox" name='checkbox' id="consent-checkbox" ref={consentRef}/> 
+                <label htmlFor="consent-checkbox">En soumettant ce formulaire, j'accepte que les informations saisies soient transmises par mail à Anthony Collette dans le but d'être recontacté concernant la demande effectuée.</label>
+                {consentError && <p>Merci de cocher la case ci-dessus.</p>}
             </div>
             <button className="btn btn--primary-outline">Envoyer</button>
         </form>}

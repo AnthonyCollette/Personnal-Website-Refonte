@@ -13,4 +13,12 @@
             display: block;
         }
     }
+
+    .form-wrapper {
+        display: flex;
+        align-items: center;
+        .col {
+            width: 50%;
+        }
+    }
 }
