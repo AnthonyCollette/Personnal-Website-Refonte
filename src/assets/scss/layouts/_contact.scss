@@ -17,8 +17,16 @@
     .form-wrapper {
         display: flex;
         align-items: center;
+        flex-direction: column-reverse;
+
+        @include min($md) {
+            flex-direction: row;
+        }
         .col {
-            width: 50%;
+            width: 100%;
+            @include min($md) {
+                width: 50%;
+            }
         }
     }
 }
