@@ -9,10 +9,20 @@ const Mentions = () => {
             <main>
                 <Container>
                     <h1>Mentions légales</h1>
+                    <h3>Propriétaire du site</h3>
                     <p><strong>Nom :</strong> Collette</p>
                     <p><strong>Prénom :</strong> Anthony</p>
                     <p><strong>Adresse :</strong> 11 rue Christian Marvillet 21160 Perrigny-lès-dijon</p>
                     <p><strong>Téléphone  :</strong> 06.84.35.05.69</p>
+                    <h3>Hébergeur</h3>
+                    <p><strong>Nom :</strong> OVH SAS</p>
+                    <p><strong>Adresse :</strong> 2 rue Kellermann 59100 Roubaix</p>
+                    <h3>Responsable publication</h3>
+                    <p><strong>Nom :</strong> Collette</p>
+                    <p><strong>Prénom :</strong> Anthony</p>
+                    <p><strong>Adresse :</strong> 11 rue Christian Marvillet 21160 Perrigny-lès-dijon</p>
+                    <p><strong>Téléphone  :</strong> 06.84.35.05.69</p>
+
                     <h2>Conditions générales de vente</h2>
                     <h3>1. PARTIES DU CONTRAT</h3>
                     <p>Le terme "Client" désigne toute personne morale ou physique, ayant requis les compétences professionnelles d'Anthony Collette en qualité de Graphiste indépendant, Développeur indépendant ou Motion Designer indépendant. Le terme "Tiers" désigne toute personne physique ou morale non partie au contrat. Le terme "Graphiste" désigne l’entreprise individuelle Anthony Collette dont le siège social est 11 rue Christian Marvillet, 21160 Perrigny-Les-Dijon, immatriculée à l'URSSAF de Dijon (21) sous le numéro siret : 83036508600016.</p>
